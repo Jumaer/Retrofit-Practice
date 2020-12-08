@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="api_key_retrofit_practice">2aeae3f2b168415365e3d98233babb13</string>
+
 </resources>
