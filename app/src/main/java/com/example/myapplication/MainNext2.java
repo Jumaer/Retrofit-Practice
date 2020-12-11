@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.myapplication.all_adapter.Quaran_Sura_Adapter;
@@ -30,10 +33,21 @@ public class MainNext2 extends AppCompatActivity {
   private LinearLayoutManager llmanager;
    Quaran_Sura_Adapter sura_adapter;
 
+   private Button b2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_next2);
+
+        b2= findViewById(R.id.nextApi2);
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainNext2.this,FlowerPractice.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerView2= findViewById(R.id.recycleView_Display_data) ;
         llmanager= new LinearLayoutManager(this);

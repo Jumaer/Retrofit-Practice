@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffff"
     tools:context=".MainNext2">
     <androidx.recyclerview.widget.RecyclerView
+        android:background="#ffff"
         android:id="@+id/recycleView_Display_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,5 +17,20 @@
 
 
     </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:textSize="12sp"
+        android:textColor="#090808"
+        android:id="@+id/nextApi2"
+        android:padding="4dp"
+        android:text="Next API display2"
+        android:layout_width="106dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="@+id/recycleView_Display_articles"
+        app:layout_constraintTop_toTopOf="@+id/recycleView_Display_articles"
+        app:layout_constraintVertical_bias="0.953"
+        tools:ignore="OnClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
