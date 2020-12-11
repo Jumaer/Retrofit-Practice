@@ -38,7 +38,7 @@ public class NewsResponseAdapter extends RecyclerView.Adapter<NewsResponseAdapte
     public void onBindViewHolder(@NonNull NewsResponseViewHolder holder, int position) {
       holder.publishedAt.setText(articleList.get(position).getPublishedAt());
       holder.description.setText(articleList.get(position).getDescription());
-      holder.content.setText(articleList.get(position).getContent());
+
       holder.source.setText(articleList.get(position).getSource().getName());
       holder.itemView.setOnClickListener(new View.OnClickListener() {
           @Override
@@ -59,13 +59,13 @@ public class NewsResponseAdapter extends RecyclerView.Adapter<NewsResponseAdapte
 
     class NewsResponseViewHolder extends RecyclerView.ViewHolder{
 
-        TextView publishedAt,description,content,source;
+        TextView publishedAt,description,source;
 
         public NewsResponseViewHolder(@NonNull View itemView) {
             super(itemView);
             publishedAt = itemView.findViewById(R.id.publishedAt);
             description = itemView.findViewById(R.id.description);
-            content = itemView.findViewById(R.id.content);
+
             source = itemView.findViewById(R.id.source);
         }
     }

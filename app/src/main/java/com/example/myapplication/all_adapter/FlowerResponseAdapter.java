@@ -1,6 +1,7 @@
 package com.example.myapplication.all_adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.FlowerDetails;
 import com.example.myapplication.R;
 import com.example.myapplication.flower_response_pojo.DataFlowerCollection;
 
@@ -38,6 +40,15 @@ public class FlowerResponseAdapter extends RecyclerView.Adapter<FlowerResponseAd
     public void onBindViewHolder(@NonNull FlowerRes_Ad_ViewHolder holder, int position) {
         holder.flowerName.setText(dataFlowerCollections.get(position).getName());
         holder.flowerPrice.setText(String.valueOf(dataFlowerCollections.get(position).getPrice()));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DataFlowerCollection dataFlowerCollection = dataFlowerCollections.get(position);
+                Intent i = new Intent(context, FlowerDetails.class);
+                i.putExtra("flowers",dataFlowerCollection);
+                context.startActivity(i);
+            }
+        });
 
     }
 

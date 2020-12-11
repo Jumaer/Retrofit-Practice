@@ -4,7 +4,9 @@ package com.example.myapplication.flower_response_pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class DataFlowerCollection {
+import java.io.Serializable;
+
+public class DataFlowerCollection implements Serializable {
 
     @SerializedName("category")
     @Expose
